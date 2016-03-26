@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libiconv-feedstock.svg?
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/libiconv-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libiconv-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libiconv-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libiconv-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libiconv/badges/version.svg)](https://anaconda.org/conda-forge/libiconv)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libiconv/badges/downloads.svg)](https://anaconda.org/conda-forge/libiconv)
+
 
 Updating libiconv-feedstock
 ===========================
