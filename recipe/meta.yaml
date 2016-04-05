@@ -16,6 +16,7 @@ build:
 test:
     commands:
         - iconv --help
+        - conda inspect linkages -n _test libiconv  # [linux]
 
 about:
     home: https://www.gnu.org/software/libiconv/
