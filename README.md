@@ -5,7 +5,7 @@ Home: https://www.gnu.org/software/libiconv/
 
 Package license: GPL and LGPL
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.)
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libiconv-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/libiconv-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/libiconv-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libiconv-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libiconv-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libiconv-feedstock/branch/master)
