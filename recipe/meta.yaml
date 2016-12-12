@@ -1,41 +1,51 @@
+{% set version = "1.14" %}
+
 package:
-    name: libiconv
-    version: 1.14
+  name: libiconv
+  version: {{ version }}
 
 source:
-    fn: libiconv-1.14.tar.gz
-    url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
-    md5: e34509b1623cec449dfeb73d7ce9c6c6
-    patches:
-        - glibc.patch  # [linux]
-        - CMakeLists.txt.patch  # [win]
-        - config.h.patch  # [win]
-        - configure.cmake.patch  # [win]
+  fn: libiconv-{{ version }}.tar.gz
+  url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-{{ version }}.tar.gz
+  sha256: 72b24ded17d687193c3366d0ebe7cde1e6b18f0df8c55438ac95be39e8a30613
+  patches:
+    - glibc.patch  # [linux]
+    - CMakeLists.txt.patch  # [win]
+    - config.h.patch  # [win]
+    - configure.cmake.patch  # [win]
 
 build:
-    number: 3
-    features:
-        - vc9  # [win and py27]
-        - vc10  # [win and py34]
-        - vc14  # [win and py35]
+  number: 4
+  features:
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py35]
 
 requirements:
-    build:
-        - python  # [win]
-        - cmake  # [win]
+  build:
+    - python  # [win]
+    - cmake  # [win]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py35]
+  run:
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py35]
 
 test:
-    commands:
-        - iconv --help  # [not win]
-        - conda inspect linkages -n _test libiconv  # [linux]
+  commands:
+    - iconv --help  # [not win]
+    - conda inspect linkages -p $PREFIX libiconv  # [not win]
+    - conda inspect objects -p $PREFIX libiconv  # [osx]
 
 about:
-    home: https://www.gnu.org/software/libiconv/
-    license: GPL and LGPL
-    summary: Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.)
+  home: https://www.gnu.org/software/libiconv/
+  license: GPL and LGPL
+  summary: "Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.)"
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - jakirkham
-        - jhamman
+  recipe-maintainers:
+    - ocefpaf
+    - jakirkham
+    - jhamman
