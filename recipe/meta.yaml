@@ -1,13 +1,12 @@
-{% set version = "1.14" %}
+{% set version = "1.15" %}
 
 package:
   name: libiconv
   version: {{ version }}
 
 source:
-  fn: libiconv-{{ version }}.tar.gz
   url: http://ftp.gnu.org/pub/gnu/libiconv/libiconv-{{ version }}.tar.gz
-  sha256: 72b24ded17d687193c3366d0ebe7cde1e6b18f0df8c55438ac95be39e8a30613
+  sha256: ccf536620a45458d26ba83887a983b96827001e92a13847b45e4925cc8913178
   patches:
     - glibc.patch  # [linux]
     - CMakeLists.txt.patch  # [win]
@@ -15,33 +14,27 @@ source:
     - configure.cmake.patch  # [win]
 
 build:
-  number: 4
-  skip: true  # [win and py35]
+  number: 0
+  skip: true  # [win and py36]
   features:
     - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py35]
-    - vc14  # [win and py36]
+    - vc14  # [win and (py35 or py36)]
 
 requirements:
   build:
     - python  # [win]
     - cmake   # [win]
     - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py35]
-    - vc 14   # [win and py36]
+    - vc 14  # [win and (py35 or py36)]
   run:
     - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py35]
-    - vc 14   # [win and py36]
+    - vc 14  # [win and (py35 or py36)]
 
 test:
   commands:
     - iconv --help  # [not win]
-    - conda inspect linkages -p $PREFIX libiconv  # [not win]
-    - conda inspect objects -p $PREFIX libiconv  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://www.gnu.org/software/libiconv/
