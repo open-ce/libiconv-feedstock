@@ -14,21 +14,16 @@ source:
     - configure.cmake.patch  # [win]
 
 build:
-  number: 0
-  skip: true  # [win and py35]
-  features:
-    - vc9   # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  number: 1
+  run_exports:
+    # Pretty good recently, let's trust them.
+    #   https://abi-laboratory.pro/tracker/timeline/libiconv/
+    - {{ pin_subpackage('libiconv') }}
 
 requirements:
   build:
-    - python  # [win]
+    - {{ compiler('c') }}
     - cmake   # [win]
-    - vc 9    # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
-  run:
-    - vc 9    # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
 
 test:
   commands:
