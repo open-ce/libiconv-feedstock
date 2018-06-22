@@ -14,14 +14,16 @@ Summary: Provides iconv for systems which don't have one (or that cannot convert
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libiconv-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libiconv-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libiconv-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libiconv-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libiconv-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libiconv-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libiconv-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libiconv-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libiconv-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libiconv-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/libiconv-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/libiconv-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libiconv/badges/version.svg)](https://anaconda.org/conda-forge/libiconv)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libiconv/badges/downloads.svg)](https://anaconda.org/conda-forge/libiconv)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libiconv-green.svg)](https://anaconda.org/conda-forge/libiconv) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libiconv.svg)](https://anaconda.org/conda-forge/libiconv) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libiconv.svg)](https://anaconda.org/conda-forge/libiconv) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libiconv.svg)](https://anaconda.org/conda-forge/libiconv) |
 
 Installing libiconv
 ===================
