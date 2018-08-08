@@ -18,3 +18,6 @@ if [[ ${HOST} =~ .*linux.* ]]; then
   chmod 755 ${PREFIX}/lib/libcharset.so.1.0.0
   chmod 755 ${PREFIX}/lib/preloadable_libiconv.so
 fi
+
+# remove libtool files
+find $PREFIX -name '*.la' -delete
