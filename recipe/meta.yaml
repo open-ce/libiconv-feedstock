@@ -35,6 +35,7 @@ test:
 about:
   home: https://www.gnu.org/software/libiconv/
   license: GPL and LGPL
+  license_file: COPYING
   summary: "Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.)"
 
 extra:
