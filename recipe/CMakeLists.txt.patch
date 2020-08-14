@@ -41,7 +41,7 @@
 +# libcharset
 +set ( SRC_LIBCHARSET
 +  libcharset/lib/localcharset.c
-+  libcharset/lib/relocatable.c
++  # libcharset/lib/relocatable-stub.c
 +)
 +
 +add_library ( charset SHARED ${SRC_LIBCHARSET} )
@@ -64,7 +64,7 @@
 +#target_link_libraries ( iconvcli iconv icrt charset )
 +#set_target_properties ( iconvcli PROPERTIES RUNTIME_OUTPUT_NAME iconv )
 +
-+install(TARGETS iconv charset #iconvcli 
++install(TARGETS iconv charset #iconvcli
 +  RUNTIME DESTINATION bin
 +  LIBRARY DESTINATION lib
 +  ARCHIVE DESTINATION lib)
